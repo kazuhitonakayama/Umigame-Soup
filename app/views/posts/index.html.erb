@@ -3,6 +3,7 @@
 
 <h1>ウミガメのスープ問題一覧</h1>
 
+<h3>ようこそ！<%= current_user.name %>さん</h3>
 <table>
   <thead>
     <tr>
@@ -25,5 +26,5 @@
 </table>
 
 <br>
-
+<%= link_to "サインアウト",destroy_user_session_path, class: "nav-link",method: :delete %>
 <%= link_to '新規問題の作成', new_post_path %>
