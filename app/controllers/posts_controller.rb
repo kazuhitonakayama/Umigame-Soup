@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id=current_user.id
+    @post.username=current_user.name
     respond_to do |format|
       if @post.save
         format.html { redirect_to :root, notice: 'Post was successfully created.' }

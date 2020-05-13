@@ -15,7 +15,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td>第<%= post.id %>問</td>
+        <td><%= post.username %>さんの投稿</td>
         <td><%= post.body %></td>
         <td><%= link_to(content_tag(:i, '', class: 'fas fa-angle-double-right'), post_path(post)) %></td>
         <td><%= link_to(content_tag(:i, '', class: 'far fa-edit'), edit_post_path(post)) %></td>
