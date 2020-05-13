@@ -1,0 +1,29 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>ウミガメのスープ問題一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td>第<%= post.id %>問</td>
+        <td><%= post.body %></td>
+        <td><%= link_to(content_tag(:i, '', class: 'fas fa-angle-double-right'), post_path(post)) %></td>
+        <td><%= link_to(content_tag(:i, '', class: 'far fa-edit'), edit_post_path(post)) %></td>
+        <td><%= link_to(content_tag(:i, '', class: 'far fa-trash-alt'), post_path(post), :method => :delete) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規問題の作成', new_post_path %>
