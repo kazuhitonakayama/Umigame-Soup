@@ -1,0 +1,12 @@
+<h2>質問コーナー</h2>
+<%= form_with model: @comment, url: { action: :create }, html: { class: 'cardnewForm' }, local: true do |f| %>
+      <%= f.hidden_field :post_id, value: @post.id %>
+      <%# 新規作成フォーム %>
+      <div class="cardnewForm_title">
+        <%= f.label :answer %>
+        <%= f.text_field :answer, autofocus: true, class: "form-control", placeholder: "質問を入力" %>
+      </div>
+      <%# 送信ボタン %>
+        <div class="text-center"><%= f.submit "作成する", class: "submitBtn" %></div>
+      </div>
+<% end %>
