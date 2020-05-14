@@ -5,11 +5,17 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    #@ai = Post.find(params[:id])
+    # @like = Like.new
+    #m @post = Post.find(params[:id])
+    # @post = Post.find(params[:id])
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+      @post = Post.find(params[:id])
+      @like = Like.new
   end
 
   # GET /posts/new

@@ -1,13 +1,12 @@
 class LikesController < ApplicationController
     def create
-        @post = Post.find(params[:post_id])
-        @alreadylike = Like.find_by(ip: request.remote_ip, post_id: params[:post_id])
-        if @alreadylike
-           redirect_back(fallback_location: root_path)
-           flash[:notice] = "すでにいいねしています"
-        else
-           @like = Like.create(post_id: params[:post_id], ip: request.remote_ip)
-           redirect_back(fallback_location: root_path)
-        end
+        @like = current_user.likes.create(post_id: params[:post_id])
+        redirect_back(fallback_location: root_path)
+    end
+    
+    def destroy
+        @like = Like.find_by(post_id: params[:post_id], user_id: current_user.id)
+        @like.destroy
+        redirect_back(fallback_location: root_path)
     end
 end

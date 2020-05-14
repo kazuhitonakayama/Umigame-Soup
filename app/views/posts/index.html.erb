@@ -20,6 +20,13 @@
         <td><%= link_to(content_tag(:i, '', class: 'fas fa-angle-double-right'), post_path(post)) %></td>
         <td><%= link_to(content_tag(:i, '', class: 'far fa-edit'), edit_post_path(post)) %></td>
         <td><%= link_to(content_tag(:i, '', class: 'far fa-trash-alt'), post_path(post), :method => :delete) %></td>
+        <td>(♡<%= post.liked_users.count %>)</td>
+        <td><%= post.user_id %></td>
+        <% if current_user.already_liked?(current_user) %>
+          <td><%= link_to 'いいねを取り消す', post_like_path(post), method: :delete %></td>
+        <% else %>
+          <td><%= link_to 'いいね', post_likes_path(post),method: :post %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
