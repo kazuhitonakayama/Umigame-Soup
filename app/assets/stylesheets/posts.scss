@@ -104,7 +104,7 @@ img {
     border-bottom: 1px solid gray;
 }
 .goodbtn {
-    padding: 10px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
 }
 .index_icon_area {
     padding: 0px 0px 0px 10px;
@@ -115,4 +115,9 @@ img {
 .index_icon_area p:last-child {
     margin: 0px 0px 0px auto;
     padding-right: 10px;
+}
+.good_answerlink {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }
