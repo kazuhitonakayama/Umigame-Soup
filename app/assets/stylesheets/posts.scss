@@ -5,26 +5,47 @@
 * {
     padding: 0;
     margin: 0;
+    color: #fff;
     font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',YuGothic,'Yu Gothic',sans-serif;
+}
+a:visited,
+a {
+    color: #fff !important;
+    text-decoration: none;
 }
 body {
     margin: 0 !important;
+    display: flex;
 }
+.contentarea {
+    margin: 0px 0px 0px 150px;
+    width: calc(100% - 150px);
+    background-image: url("contentarea-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
 // TOPページ
 header {
-    height:70px;
-    background-color: aqua;
+    height:100vh;
+    width: 150px;
+    position: fixed;
+    background-color: #1e50a2;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 0px;
+    color: white;
 }
 .header-listarea {
-    display: flex;
 }
 .header-listarea li {
     list-style: none;
-    margin-left: 20px;
+    margin: 20px 0px;
 }
 .font-weight-bold {
     font-weight: bold;
@@ -35,6 +56,7 @@ img {
 }
 .header-listarea li a {
     text-decoration: none;
+    color: white;
 }
 
 // indexページ
@@ -51,7 +73,7 @@ img {
 .index-question {
     width: 30%;
     margin: 20px 20px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
 }
 .index_icon_area {
     display: flex;
