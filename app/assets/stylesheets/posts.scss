@@ -5,13 +5,16 @@
 * {
     padding: 0;
     margin: 0;
-    color: #fff;
+    // color: #fff;
     font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',YuGothic,'Yu Gothic',sans-serif;
 }
 a:visited,
 a {
-    color: #fff !important;
+    // color: #fff !important;
     text-decoration: none;
+}
+a:hover {
+    background: none !important;
 }
 body {
     margin: 0 !important;
@@ -63,6 +66,7 @@ img {
 .index-title {
     text-align: center;
     margin: 20px 0%;
+    color: #fff;
 }
 .index-questionarea {
     display: flex;
@@ -71,10 +75,41 @@ img {
     justify-content: center;
 }
 .index-question {
-    width: 30%;
-    margin: 20px 20px;
-    border: 1px solid #fff;
+    width: 250px;
+    margin: 20px 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    box-shadow: 2px 2px 4px #fff;
 }
 .index_icon_area {
     display: flex;
+}
+.proposer {
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+}
+.question-content {
+    height: 145px;
+    overflow-y: scroll;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+.goodbtn {
+    padding: 10px 0px 0px 10px;
+}
+.index_icon_area {
+    padding: 0px 0px 0px 10px;
+}
+.index_icon_area p {
+    margin-right: 10px;
+}
+.index_icon_area p:last-child {
+    margin: 0px 0px 0px auto;
+    padding-right: 10px;
 }
