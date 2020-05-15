@@ -1,0 +1,13 @@
+<h2>解答！</h2>
+<%= form_with model: @answer, url: { action: :create }, html: { class: 'cardnewForm' }, local: true do |f| %>
+      <%= f.hidden_field :post_id, value: @post.id %>
+      <%# 新規作成フォーム %>
+      <div class="cardnewForm_title">
+        <%= f.label :body %>
+        <%= f.text_field :body, autofocus: true, class: "form-control", placeholder: "解答を入力" %>
+      </div>
+      <%# 送信ボタン %>
+        <div class="text-center"><%= f.submit "作成する", class: "submitBtn" %></div>
+      </div>
+<% end %>
+<%= link_to 'TOP', posts_path %>

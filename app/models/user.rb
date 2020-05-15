@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes,dependent: :destroy
+  has_many :answers,dependent: :destroy
   has_many :liked_posts, through: :likes, source: :post #userがどの投稿をいいねしているのかを簡単に取得できるようになります。
 
   # ユーザーが投稿に対して、すでにいいねをしているのかどうかを判定することができるようにuser.rbで、already_liked?を定義します。

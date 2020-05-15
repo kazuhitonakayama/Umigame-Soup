@@ -15,7 +15,7 @@
           <p class="goodbtn"><%= link_to(content_tag(:i, '', class: 'fas fa-heart'), post_likes_path(post),method: :post) %><%= post.liked_users.count %></p>　　<%# <%= link_to 'いいね', post_likes_path(post),method: :post %>
         <% end %>
         <% if post.user_id == current_user.id %>
-          <p class="answerlink">解答作成</p>
+          <p class="answerlink"><%= link_to '解答作成', new_post_answer_path(post) %></p>
         <% end %>
       </div>
       <div class="index_icon_area">
