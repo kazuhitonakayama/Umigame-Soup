@@ -5,10 +5,15 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    #@current_user=current_user.id
     #@ai = Post.find(params[:id])
     # @like = Like.new
     #m @post = Post.find(params[:id])
     # @post = Post.find(params[:id])
+  end
+
+  def today
+    @posts = Post.order("RANDOM()").limit(1)
   end
 
   # GET /posts/1
@@ -16,7 +21,6 @@ class PostsController < ApplicationController
   def show
       @post = Post.find(params[:id])
       @like = Like.new
-      
   end
 
   # GET /posts/new
@@ -44,6 +48,7 @@ class PostsController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json

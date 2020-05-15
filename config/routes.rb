@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "posts#index"
+  get "posts/today" => "posts#today"
   resources :posts do
     resources :comments
     resources :likes, only: [:create, :destroy]

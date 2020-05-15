@@ -8,17 +8,20 @@
     // color: #fff;
     font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',YuGothic,'Yu Gothic',sans-serif;
 }
-a:visited,
 a {
     // color: #fff !important;
     text-decoration: none;
 }
-a:hover {
+a:hover,a:visited {
     background: none !important;
+    color: #000 !important;
 }
 body {
     margin: 0 !important;
     display: flex;
+}
+a.nav-link {
+    color: #fff !important;
 }
 .contentarea {
     margin: 0px 0px 0px 150px;
@@ -84,7 +87,7 @@ img {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
-    box-shadow: 2px 2px 4px #fff;
+    box-shadow: 2px 2px 15px #fff;
 }
 .index_icon_area {
     display: flex;
