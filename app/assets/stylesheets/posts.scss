@@ -77,16 +77,22 @@ img {
     flex-wrap: wrap;
     justify-content: center;
 }
+.index-questionarea::after {
+    content: '';
+    display: block;
+    width: 776px;
+    height: 0;
+}
 .index-question {
     width: 250px;
     margin: 20px 50px;
     padding: 20px;
     background-color: #fff;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     box-shadow: 2px 2px 15px #fff;
 }
 .index_icon_area {
