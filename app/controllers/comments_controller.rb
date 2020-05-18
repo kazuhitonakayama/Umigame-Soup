@@ -30,11 +30,15 @@ class CommentsController < ApplicationController
         # DELETE /Commnets/1
         # DELETE /Commnets/1.json
         def destroy
+          @post=Post.find(params[:post_id])
+          @comment=@post.comments.find(params[:id])
+          @comment.destroy
+          redirect_to post_path(@post)
         end
       
         private
           # Use callbacks to share common setup or constraints between actions.
-          def set_commnet
+          def set_comment
             @comment = Comment.find(params[:id])
           end
       

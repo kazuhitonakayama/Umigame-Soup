@@ -17,6 +17,8 @@ class AnswersController < ApplicationController
             render action: :new
         end
     end
+    def destroy
+    end
 
     private
       def answer_params
