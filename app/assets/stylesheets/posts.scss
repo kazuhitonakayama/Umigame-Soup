@@ -127,3 +127,17 @@ img {
     justify-content: space-between;
     padding: 10px;
 }
+
+// responsible
+@media screen and (max-width: 768px) {
+    header {
+        height: 230px;
+        width: 100%;
+        text-align: center;
+    }
+    .contentarea {
+        margin: 0px;
+        width: 100%;
+        padding-top: 230px;
+    }
+}
