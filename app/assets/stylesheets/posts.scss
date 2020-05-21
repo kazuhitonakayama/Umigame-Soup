@@ -80,11 +80,11 @@ img {
 .index-questionarea::after {
     content: '';
     display: block;
-    width: 776px;
+    width: 900px;
     height: 0;
 }
 .index-question {
-    width: 250px;
+    width: 350px;
     margin: 20px 50px;
     padding: 20px;
     background-color: #fff;
@@ -128,6 +128,28 @@ img {
     padding: 10px;
 }
 
+// pegination
+.pagination {
+    display: block;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+// refactoring
+article, aside, figcaption, figure, footer, header, hgroup, main,section{
+    display: flex !important;
+}
+.nav-link {
+    padding: 0 !important;
+}
+a.page-link:hover {
+    color: #fff !important;
+    font-weight: bold;
+}
+h1 {
+    font-size: x-large !important;
+}
+
 // responsible
 @media screen and (max-width: 768px) {
     header {
@@ -139,5 +161,8 @@ img {
         margin: 0px;
         width: 100%;
         padding-top: 230px;
+    }
+    .index-question {
+        width: 300px;
     }
 }

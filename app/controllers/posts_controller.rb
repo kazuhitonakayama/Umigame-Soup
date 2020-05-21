@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.page(params[:page]).per(6)
     #@current_user=current_user.id
     #@ai = Post.find(params[:id])
     # @like = Like.new
