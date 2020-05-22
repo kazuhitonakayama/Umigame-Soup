@@ -10,7 +10,7 @@
       <%# ここをshow.html.erbに記述したらいける %>
       <div class="good_answerlink">
       <% if user_signed_in? %>
-        <% if current_user.already_liked?(current_user) %>
+        <% if post.already_liked?(current_user) %>
           <p><%= link_to 'いいねを取り消す', post_like_path(post), method: :delete %></p>
         <% else %>
           <p class="goodbtn"><%= link_to(content_tag(:i, '', class: 'fas fa-heart'), post_likes_path(post),method: :post) %><%= post.liked_users.count %></p>　　<%# <%= link_to 'いいね', post_likes_path(post),method: :post %>
