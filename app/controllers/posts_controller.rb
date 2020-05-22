@@ -16,6 +16,10 @@ class PostsController < ApplicationController
     @posts = Post.order("RANDOM()").limit(1)
   end
 
+  def ranking
+    @all_ranks = Post.create_all_ranks
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show

@@ -7,4 +7,7 @@ class Post < ApplicationRecord
     def already_liked?(post)
         self.likes.exists?(post_id: post.id)
     end
+    def self.create_all_ranks #Noteクラスからデータを取ってくる処理なのでクラスメソッド！
+        Post.find(Like.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
+      end
 end
