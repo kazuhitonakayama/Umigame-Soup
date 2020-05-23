@@ -34,7 +34,7 @@ a.nav-link {
     overflow-y: scroll;
 }
 
-// TOPページ
+// PAGE TOPページ
 header {
     height:100vh;
     width: 150px;
@@ -64,7 +64,7 @@ img {
     color: white;
 }
 
-// indexページ
+// PAGE indexページ
 .index-title {
     text-align: center;
     margin: 20px 0%;
@@ -127,15 +127,25 @@ img {
     padding: 10px;
 }
 
-// pegination
+// PAGE pegination
 .pagination {
     display: block;
     justify-content: center;
     margin-top: 30px;
 }
 
-// show 
+// PAGE show 
 .show {
+    color: #fff;
+}
+a.show.to-post-comment,
+a.show.to-post-edit,
+a.show.to-top{
+    color: #fffc !important;
+}
+
+// PAGE comment new
+.comment {
     color: #fff;
 }
 
@@ -157,16 +167,22 @@ h1 {
 // responsible
 @media screen and (max-width: 768px) {
     header {
-        height: 230px;
+        height: 280px;
         width: 100%;
         text-align: center;
     }
     .contentarea {
         margin: 0px;
         width: 100%;
-        padding-top: 230px;
+        padding-top: 280px;
     }
     .index-question {
         width: 300px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .index-question {
+        width: 90%;
+        margin: 20px 0px;
     }
 }

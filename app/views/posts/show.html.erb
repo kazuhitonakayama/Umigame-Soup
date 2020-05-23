@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-<p class="show body">
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+<div class="index-question">
+  <p class="proposer"><%= @post.username %>さんからの問題</p>
+  <p class="question-content"><%= @post.body %></p>
+</div>
 <h3 class="show good-count">いいね件数: <%= @post.likes.count %></h3>
   <%#<% if user_signed_in? %>
   <%#  <% if current_user.already_liked?(@post) %>
