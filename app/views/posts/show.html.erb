@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="show body">
   <strong>Body:</strong>
   <%= @post.body %>
 </p>
-<h3>いいね件数: <%= @post.likes.count %></h3>
+<h3 class="show good-count">いいね件数: <%= @post.likes.count %></h3>
   <%#<% if user_signed_in? %>
   <%#  <% if current_user.already_liked?(@post) %>
   <%#    <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>
@@ -12,24 +12,24 @@
   <%#    <%= button_to 'いいね', post_likes_path(@post) %>
   <%#  <% end %>
   <%#<% end %>
-  <h2>いいねしたユーザー</h2>
+  <h2 class="show good-user">いいねしたユーザー</h2>
   <% @post.liked_users.each do |user| %>
-    <p><%= user.name %></p>
+    <p class="show good-username"><%= user.name %></p>
   <% end %>
 
   <%# # 投稿したコメントを表示★★★★★★★★★★★★★★★★★★ %>
   <% @post.comments.each do |comment| %>
-    <p><%= comment.answer %><%= link_to(content_tag(:i, '', class: 'far fa-trash-alt'), post_comment_path(@post,comment), :method => :delete) %></p>
+    <p class="show comment"><%= comment.answer %><%= link_to(content_tag(:i, '', class: 'far fa-trash-alt'), post_comment_path(@post,comment), :method => :delete) %></p>
   <% end %>
 
   <% @post.answers.each do |answer| %>
-    <p><%= answer.body %></p>
+    <p class="show answer"><%= answer.body %></p>
   <% end %>
   <%# ここまで %>
 
 
-  <%= link_to '質問する', new_post_comment_path(@post) %> |
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-  <%= link_to 'TOP', posts_path %>
+  <%= link_to '質問する', new_post_comment_path(@post),class: "show to-post-comment" %> |
+  <%= link_to 'Edit', edit_post_path(@post),class: "show to-post-edit" %> |
+  <%= link_to 'TOP', posts_path,class: "show to-top" %>
 </div>
 

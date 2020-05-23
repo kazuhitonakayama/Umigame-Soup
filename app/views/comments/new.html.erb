@@ -1,3 +1,4 @@
+<div>
 <h2>質問コーナー</h2>
 <%= form_with model: @comment, url: { action: :create }, html: { class: 'cardnewForm' }, local: true do |f| %>
       <%= f.hidden_field :post_id, value: @post.id %>
@@ -11,3 +12,5 @@
       </div>
 <% end %>
 <%= link_to 'TOP', posts_path %>
+</div>
+
