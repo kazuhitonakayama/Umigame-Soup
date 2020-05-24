@@ -4,7 +4,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.page(params[:page]).per(6)
+    if params[:search] == nil
+      @posts = Post.all.page(params[:page]).per(6)
+    elsif params[:search] == '' 
+      @posts = Post.all.page(params[:page]).per(6)
+    else
+      @posts = Post.where("body LIKE ? ", '%' + params[:search] + '%').page(params[:page]).per(6)
+    end
     #@current_user=current_user.id
     #@ai = Post.find(params[:id])
     # @like = Like.new

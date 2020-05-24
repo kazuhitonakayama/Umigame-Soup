@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "posts#index"
+  get 'posts' => 'posts#index'
   get "posts/today" => "posts#today"
   get "posts/ranking" => "posts#ranking"
   resources :posts do
