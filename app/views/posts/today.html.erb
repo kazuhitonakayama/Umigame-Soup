@@ -1,5 +1,6 @@
 <% @posts.each do |post| %>
-    <div class="index-question">
+    <h1 class="today-title">今日の一問</h1>
+    <div class="index-question today">
       <p class="proposer"><%= post.username %>さんからの問題</p>
       <p class="question-content"><%= post.body %></p>
       <%# ここをshow.html.erbに記述したらいける %>

@@ -157,6 +157,23 @@ a.show.to-top{
 // PAGE comment new
 .comment {
     color: #fff;
+} 
+
+// PAGE TODAY
+.index-question.today {
+    margin: auto;
+    //margin-top: 100px;
+}
+
+h1.today-title {
+    color: #fff;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+// PAGE ranking
+.index-title.ranking {
+    margin: 20px 0px 10px 0px;
 }
 
 // refactoring
