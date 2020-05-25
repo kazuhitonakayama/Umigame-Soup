@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     elsif params[:search] == '' 
       @posts = Post.all.page(params[:page]).per(6)
     else
-      @posts = Post.where("body LIKE ? ", '%' + params[:search] + '%').page(params[:page]).per(6)
+      @posts = Post.where("body LIKE ? OR username LIKE ?", '%' + params[:search] + '%','%' + params[:search] + '%').page(params[:page]).per(6)
     end
     #@current_user=current_user.id
     #@ai = Post.find(params[:id])
