@@ -1,5 +1,6 @@
-
-<p id="notice"><%= notice %></p>
+<% if flash[:notice] %>
+  <p class="flash post-new-post"><%= flash[:notice] %></p>
+<% end %>
 
 <h1 class="index-title">ウミガメのスープ問題集</h1>
 
