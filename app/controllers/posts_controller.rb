@@ -48,15 +48,12 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id=current_user.id
     @post.username=current_user.name
-    respond_to do |format|
       if @post.save
-        format.html { redirect_to :root, notice: 'Post was successfully created.' }
-        format.json { render :root, status: :created, location: @post }
+        flash[:notice] = "新規の問題を投稿しました!!"
+        redirect_to :root
       else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        render action: :new
       end
-    end
   end
 
 
