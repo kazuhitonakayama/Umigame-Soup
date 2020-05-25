@@ -49,7 +49,7 @@ class PostsController < ApplicationController
     @post.user_id=current_user.id
     @post.username=current_user.name
       if @post.save
-        flash[:notice] = "#{@post.username}さん！新規の問題を投稿しましたよ！"
+        flash[:notice] = "#{@post.username}さん！<br>新規の問題を投稿しましたよ！"
         redirect_to :root
       else
         render action: :new
