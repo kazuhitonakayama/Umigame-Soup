@@ -19,7 +19,7 @@
 
     <%# # 投稿したコメントを表示★★★★★★★★★★★★★★★★★★ %>
     <% @post.comments.each do |comment| %>
-      <p class="show comment"><%= comment.answer %><%= link_to(content_tag(:i, '', class: 'far fa-trash-alt'), post_comment_path(@post,comment), :method => :delete) %></p>
+      <p class="show comment"><%= comment.answer %><%= link_to(content_tag(:i, '', class: 'far fa-trash-alt show'), post_comment_path(@post,comment), :method => :delete) %></p>
     <% end %>
 
     <% @post.answers.each do |answer| %>

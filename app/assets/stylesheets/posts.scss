@@ -239,7 +239,7 @@ a.show.to-top{
 }
 
 .index-question.show {
-    margin: auto;
+    margin: 100px auto 50px auto;
     color: #000;
 }
 
@@ -251,7 +251,16 @@ a.show.to-top{
 // PAGE comment new
 .comment {
     color: #fff;
+    margin: 10px;
 } 
+.comment-new {
+    width: 50%;
+    margin: 100px auto 50px auto;
+    text-align: center;
+}
+textarea#comment_answer {
+    color: #000;
+}
 
 // PAGE TODAY
 .index-question.today {
