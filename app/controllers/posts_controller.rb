@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index,:today,:ranking,:show,:edit,:create,:update,:destroy]
+  before_action :authenticate_user!, except: [:index,:today,:ranking,:show,:edit,:create,:update,:destroy,:indexusername]
 
   # GET /posts
   # GET /posts.json
@@ -18,6 +18,21 @@ class PostsController < ApplicationController
     #m @post = Post.find(params[:id])
     # @post = Post.find(params[:id])
   end
+
+  # def indexusername
+  #   if params[:search] == nil
+  #     @posts = Post.all.page(params[:page]).per(6)
+  #   elsif params[:search] == '' 
+  #     @posts = Post.all.page(params[:page]).per(6)
+  #   else
+  #     @posts = Post.where("username LIKE ?", '%' + params[:search] + '%').page(params[:page]).per(6)
+  #   end
+  #   #@current_user=current_user.id
+  #   #@ai = Post.find(params[:id])
+  #   # @like = Like.new
+  #   #m @post = Post.find(params[:id])
+  #   # @post = Post.find(params[:id])
+  # end
 
   def today
     @posts = Post.order("RANDOM()").limit(1)

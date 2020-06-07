@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'posts' => 'posts#index'
   get "posts/today" => "posts#today"
   get "posts/ranking" => "posts#ranking"
+  # get "posts/indexusername" => "posts#indexusername"
   resources :posts do
     resources :comments
     resources :likes, only: [:create, :destroy]
