@@ -56,39 +56,43 @@ p.flash.post-new-post {
 @keyframes fadeInOut {
     0% {
         background: rgba(113,179,113,0.5);
-        width:300px;
+        width:350px;
+        color: rgba(255,255,255,1);
     }
 
     20% {
         background: rgba(113,179,113,1);
-        width:350px;
+        width:400px;
+        color: rgba(255,255,255,1);
     }
 
     40% {
         background: rgba(113,179,113,0.5);
-        width:300px;
+        width:350px;
+        color: rgba(255,255,255,1);
     }
 
     60% {
         background: rgba(113,179,113,1);
-        width:350px;
+        width:400px;
+        color: rgba(255,255,255,1);
     }
 
     80% {
         background: rgba(113,179,113,0.5);
-        width:300px;
-
+        width:350px;
+        color: rgba(255,255,255,1);
     }
 
     90% {
         background: rgba(113,179,113,1);
-        width:350px;
-
+        width:400px;
+        color: rgba(255,255,255,1);
     }
 
     100% {
         background: rgba(113,179,113,0);
-        width: 35000px;
+        color: rgba(255,255,255,0);
 }
 }
 // @keyframes fadeInOut {
