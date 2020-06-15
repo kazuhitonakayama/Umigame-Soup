@@ -17,7 +17,7 @@
   <% @posts.each do |post| %>
     <div class="index-question">
       <p class="proposer">
-        <%= link_to post.username + "さんからの投稿", user_path(post.id) %>
+        <%= link_to post.username+'さんからの投稿', user_path(post.id) %>
       </p>
       <p class="question-content"><%= post.body %></p>
       <%# ここをshow.html.erbに記述したらいける %>
