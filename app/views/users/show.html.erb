@@ -1,0 +1,18 @@
+<h1 class="users_show"><%= @user.name %>さんの投稿一覧</h1>
+<div class="index-questionarea">
+    <% @all.each do |a| %>
+        <div class="index-question">
+            <p class="question-content"><%= a.body %></p>
+            <div class="index_icon_area">
+                <p><%= link_to(content_tag(:i, '詳細へ', class: 'fas fa-angle-double-right'), post_path(a)) %></p>
+                <% if user_signed_in? %> <%# ユーザーがサインインしていれば %>
+                <% if a.user_id == current_user.id %>　<%# 投稿のuser_idとログインユーザーのIDが一致していれば %>
+                    <p><%= link_to(content_tag(:i, '', class: 'far fa-edit'), edit_post_path(a)) %></p>
+                    <p><%= link_to(content_tag(:i, '', class: 'far fa-trash-alt'), post_path(a), :method => :delete) %></p>
+                <% end %>
+                <% end %>
+                <p><%= link_to(content_tag(:i, '質問', class: 'far fa-comment-dots'), new_post_comment_path(a)) %></p>
+            </div>
+        </div>
+    <% end %>
+</div>

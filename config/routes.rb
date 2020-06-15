@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "posts/today" => "posts#today"
   get "posts/ranking" => "posts#ranking"
   # get "posts/indexusername" => "posts#indexusername"
+  resources :users, only: [:show]
   resources :posts do
     resources :comments
     resources :likes, only: [:create, :destroy]
