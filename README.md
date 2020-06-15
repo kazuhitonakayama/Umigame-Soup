@@ -7,6 +7,8 @@ Things you may want to cover:
 
 * Ruby version
 
+** Application URL https://umigame-soup-app.herokuapp.com/ 
+
 * System dependencies
 
 * Configuration
