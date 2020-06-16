@@ -16,3 +16,21 @@
         </div>
     <% end %>
 </div>
+<h1 class="users_show"><%= @user.name %>さんのいいねした投稿一覧</h1>
+<div class="index-questionarea">
+    <% @likes.each do |l| %>
+        <div class="index-question">
+            <p class="question-content"><%= post=Post.find(l.post_id).body %><% l.post_id %></p>
+            <div class="index_icon_area">
+                <p><%= link_to(content_tag(:i, '詳細へ', class: 'fas fa-angle-double-right'), post_path(l)) %></p>
+                <% if user_signed_in? %> <%# ユーザーがサインインしていれば %>
+                <% if l.user_id == current_user.id %>　<%# 投稿のuser_idとログインユーザーのIDが一致していれば %>
+                    <p><%= link_to(content_tag(:i, '', class: 'far fa-edit'), edit_post_path(l)) %></p>
+                    <p><%= link_to(content_tag(:i, '', class: 'far fa-trash-alt'), post_path(l), :method => :delete) %></p>
+                <% end %>
+                <% end %>
+                <p><%= link_to(content_tag(:i, '質問', class: 'far fa-comment-dots'), new_post_comment_path(l)) %></p>
+            </div>
+        </div>
+    <% end %>
+</div>
