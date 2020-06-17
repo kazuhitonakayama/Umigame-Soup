@@ -19,9 +19,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <%# bootstrap %>
   </head>
-
   <body>
-    <header>
+    <header class="header" id="header">
       <h1><%= link_to "みんガメ",root_path, class: "nav-link" %></h1>
       <div>
         <ul class="header-listarea">
@@ -38,6 +37,7 @@
         </ul>
       </div>
     </header>
+    <%= javascript_pack_tag 'layouts/application' %>
     <div class="contentarea">
       <%= yield %>
     </div>
