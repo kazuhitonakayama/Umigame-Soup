@@ -1,5 +1,4 @@
 (function(){
-    
     const $header = document.querySelector('.header');
     //addEventListener：イベント処理（click）
     $header.addEventListener('click', function(){
