@@ -3,14 +3,6 @@
     <div class="index-question today">
       <p class="proposer"><%= post.username %>さんからの問題</p>
       <p class="question-content"><%= post.body %></p>
-      <% if current_user %>
-      <%# ここをshow.html.erbに記述したらいける %>
-        <% if current_user.already_liked?(current_user) %>
-          <p><%= link_to 'いいねを取り消す', post_like_path(post), method: :delete %></p>
-        <% else %>
-          <p class="goodbtn"><%= link_to(content_tag(:i, '', class: 'fas fa-heart'), post_likes_path(post),method: :post) %><%= post.liked_users.count %></p>　　<%# <%= link_to 'いいね', post_likes_path(post),method: :post %>
-        <% end %>
-      <% end %>
       <div class="index_icon_area">
         <p><%= link_to(content_tag(:i, '', class: 'fas fa-angle-double-right'), post_path(post)) %></p>
         <p><%= link_to(content_tag(:i, '', class: 'far fa-edit'), edit_post_path(post)) %></p>
