@@ -19,20 +19,6 @@ class PostsController < ApplicationController
     # @post = Post.find(params[:id])
   end
 
-  # def indexusername
-  #   if params[:search] == nil
-  #     @posts = Post.all.page(params[:page]).per(6)
-  #   elsif params[:search] == '' 
-  #     @posts = Post.all.page(params[:page]).per(6)
-  #   else
-  #     @posts = Post.where("username LIKE ?", '%' + params[:search] + '%').page(params[:page]).per(6)
-  #   end
-  #   #@current_user=current_user.id
-  #   #@ai = Post.find(params[:id])
-  #   # @like = Like.new
-  #   #m @post = Post.find(params[:id])
-  #   # @post = Post.find(params[:id])
-  # end
 
   def today
     @posts = Post.order("RANDOM()").limit(1)
