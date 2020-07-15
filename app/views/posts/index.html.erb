@@ -3,7 +3,6 @@
 <% end %>
 
 <h1 class="index-title">ウミガメのスープ問題集</h1>
-
 <div class="search-area">
   <%= form_tag({controller:"posts",action:"index"}, method: :get,class: "search-form") do %>
     <%= text_field_tag :search,'' ,placeholder: "気になる単語を入力して検索" %>

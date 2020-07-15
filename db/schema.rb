@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_15_143536) do
+ActiveRecord::Schema.define(version: 2020_07_15_114026) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "post_id", null: false
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
     t.index ["post_id"], name: "index_answers_on_post_id"
   end
 
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_143536) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "post_id"
+    t.integer "user_id"
   end
 
   create_table "likes", force: :cascade do |t|

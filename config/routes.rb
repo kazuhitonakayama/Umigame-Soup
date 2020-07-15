@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "posts/ranking" => "posts#ranking"
   # get "posts/indexusername" => "posts#indexusername"
   get "users/likes/:id" => "users#likes"
-  resources :users, only: [:show]
+  resources :users
   resources :posts do
     resources :comments
     resources :likes, only: [:create, :destroy]
