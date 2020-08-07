@@ -1,7 +1,14 @@
 <% if flash[:notice] %>
   <p class="flash post-new-post"><i class="far fa-paper-plane"></i><%= flash[:notice].html_safe %></p>
 <% end %>
+<!-- Modal HTML embedded directly into document -->
+<div id="ex1" class="modal">
+  <p>Thanks for clicking. That felt good.</p>
+  <a href="#" rel="modal:close">Close</a>
+</div>
 
+<!-- Link to open the modal -->
+<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
 <h1 class="index-title">ウミガメのスープ問題集</h1>
 <div class="search-area">
   <%= form_tag({controller:"posts",action:"index"}, method: :get,class: "search-form") do %>
