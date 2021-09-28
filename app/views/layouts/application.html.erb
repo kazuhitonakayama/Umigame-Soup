@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <%# lightboxのダウンロード %>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
@@ -48,7 +48,7 @@
         </ul>
       </div>
     </header>
-    <%= javascript_pack_tag 'layouts/application' %>
+    <%#= javascript_pack_tag 'layouts/application' %>
     <div class="contentarea">
       <div class="trigger" id="trigger"></div>
       <%= yield %>
